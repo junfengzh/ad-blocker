@@ -1,0 +1,5 @@
+/* Empty slots left behind once the ad network requests are blocked */
+.adlab, .adlab_border, .midbannerw, .adslink, .adti, .adtr, .adt,
+iframe:not([src*="wenxuecity.com"]):not([src*="youtube"]) {
+  display: none !important;
+}

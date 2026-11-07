@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Ad Blocker (local)",
+  "version": "1.1",
+  "description": "Blocks third-party ad scripts/frames on listed sites. No JavaScript; only static blocking rules and CSS.",
+  "permissions": ["declarativeNetRequest"],
+  "declarative_net_request": {
+    "rule_resources": [{ "id": "rules", "enabled": true, "path": "rules.json" }]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.wenxuecity.com/*"],
+      "css": ["css/wenxuecity.css"],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ]
+}
